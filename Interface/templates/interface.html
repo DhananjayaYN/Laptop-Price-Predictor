@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Laptop Price Predictor</title>
+        <link rel="stylesheet"  href="static/interfaceCSS.css">
+    </head>
+    <body>
+        <div class="main_box">
+        <div class='left_side'>
+            <p class="titles">Laptop Price Predictor</p>
+            
+        </div>
+        <div class="right_side">
+            <div class="contend_box">
+            <form action="/" method="POST">
+                <table>
+                <tr>
+                    <td>
+                        <label for="Model_name">Model Name :</label>
+                    </td>
+                    <td>
+                        <select name="Model_name" class="Model_name" required>
+                            <option value="" disabled selected>SELECT</option>
+                            <option value="ACER">ACER</option>
+                            <option value="ASUS">ASUS</option>
+                            <option value="DELL">DELL</option>
+                            <option value="HP">HP</option>
+                            <option value="MACBOOK">MACBOOK</option>
+                            <option value="MSI">MSI</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="Processor">Processor :</label>
+                    </td>
+                    <td>
+                        <select name="Processor" class="Processor" required>
+                            <option value="" disabled selected>SELECT</option>
+                            <option value="APPLE">APPLE</option>
+                            <option value="Ryzen5">Ryzen5</option>
+                            <option value="Ryzen7">Ryzen7</option>
+                            <option value="i3">i3</option>
+                            <option value="i5">i5</option>
+                            <option value="i7">i7</option>
+                            <option value="i9">i9</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="Generation">Generation :</label>
+                    </td>
+                    <td>
+                        <select name="Generation" class="Generation" required>
+                            <option value="" disabled selected>SELECT</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="Ram">Ram :</label>
+                    </td>
+                    <td>
+                        <select name="Ram" class="Ram">
+                            <option value="4GB">4GB</option>
+                            <option value="8GB">8GB</option>
+                            <option value="12GB">12GB</option>
+                            <option value="16GB">16GB</option>
+                            <option value="32GB">32GB</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="Hard_drive_type">Hard Drive Type :</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="Hard_drive_type" name="Hard_drive_type" value="SSD" required>
+                        <label for="Hard_drive_type">SSD</label>
+                        <input type="radio" id="Hard_drive_type" name="Hard_drive_type" value="HDD" required>
+                        <label for="Hard_drive_type">HDD</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="Hard_drive_size">Hard Drive Size :</label>
+                    </td>
+                    <td>
+                        <select name="Hard_drive_size" class="Hard_drive_size">
+                            <option value="128GB">128GB</option>
+                            <option value="256GB">256GB</option>
+                            <option value="512GB">512GB</option>
+                            <option value="1TB">1TB</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="clear" value="CLEAR"/>
+                    </td>
+                    <td>
+                        <input type="submit" class="submit" value="Predict Price"/>
+                    </td>
+                </tr>
+                </table>
+            </form>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

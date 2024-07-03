@@ -1,0 +1,52 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.main_box{
+    background: radial-gradient(purple,black);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.left_side,.right_side{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.titles{
+    font-size: larger;
+    color: rgb(87, 42, 165);
+}
+
+form{
+    width: 65%;
+    height: 450px;
+    border: 3px solid white;
+    align-self: center;
+    margin-top: 10%;
+    margin-left: 10%;
+    border-radius: 50px;
+}
+
+table{
+    width: 95%;
+    height: 95%;
+    text-align: left;
+    color: white;
+    margin: 5%;
+    font-size: 20px;
+}
+select{
+    width: 100px;
+}
+
+.submit,.clear{
+    width: 120px;
+    height: 30px;
+    border-radius: 50px;
+}
+
