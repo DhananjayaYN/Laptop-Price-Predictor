@@ -1,6 +1,14 @@
 from flask import Flask,render_template,request
+import pickle
 
 app = Flask(__name__)
+
+def prediction_value(array_list):
+    filename = 'model.pickle'
+    with open(filename, 'rb') as file:
+        model = pickle.load(file)
+    value = model.predict([array_list])
+    return value
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
@@ -40,8 +48,9 @@ def index():
 
         check(hard_size_list,Hard_drive_size) # for store the size of hard drive-------------------
 
-
+        #predictor = prediction_value(feature_list)
         print(feature_list)
+        
 
     return render_template('interface.html')
 
