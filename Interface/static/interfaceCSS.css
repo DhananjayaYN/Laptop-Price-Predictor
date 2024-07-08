@@ -28,14 +28,13 @@ body{
 
 form{
     width: 65%;
-    height: 450px;
+    height: 80vh;
     border: 1px solid white;
     align-self: center;
     margin-top: 10%;
     margin-left: 10%;
     border-radius: 50px;
-    box-shadow: -5px -5px 5px rgba(255, 255, 255, 1);
-                
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 1);          
 }
 
 table{
@@ -50,6 +49,14 @@ select{
     width: 100px;
     border-radius: 20px;
     height: 25px;
+}
+
+.result{
+    width: 90%;
+    text-align: center;
+    height: 30px;
+    background: radial-gradient(rgb(3, 20, 117),black);
+    border-radius: 20px;
 }
 
 .submit,.clear{

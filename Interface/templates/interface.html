@@ -4,6 +4,11 @@
         <meta charset="UTF-8">
         <title>Laptop Price Predictor</title>
         <link rel="stylesheet"  href="static/interfaceCSS.css">
+        <script>
+            function clearVariable() {
+                document.getElementsByClassName('clear').innerText = "";
+            }
+        </script>
     </head>
     <body>
         <div class="wrapper">
@@ -135,12 +140,19 @@
                         </select>
                     </td>
                 </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="result">Rs. {{pred}}</div>
+                    </td>
+                </tr>
+
                 <tr>
                     <td>
-                        <input type="button" class="clear" value="CLEAR"/>
+                        <input type="button" class="clear" onclick="Clear()" value="CLEAR"/>
                     </td>
                     <td>
-                        <input type="submit" class="submit" value="Predict Price"/>
+                        <input type="submit" class="submit" onclick="Submit()" value="Predict Price"/>
                     </td>
                 </tr>
                 </table>
