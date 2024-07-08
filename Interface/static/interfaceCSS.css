@@ -48,6 +48,8 @@ table{
 }
 select{
     width: 100px;
+    border-radius: 20px;
+    height: 25px;
 }
 
 .submit,.clear{
