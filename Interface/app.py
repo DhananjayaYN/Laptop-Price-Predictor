@@ -4,7 +4,7 @@ import pickle
 app = Flask(__name__)
 
 def prediction_value(array_list):
-    filename = 'model.pickle'
+    filename = 'pred_model.pickle'
     with open(filename, 'rb') as file:
         model = pickle.load(file)
     value = model.predict([array_list])
@@ -12,6 +12,7 @@ def prediction_value(array_list):
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
+    predictor = 0
     if request.method == 'POST':  ##Collect the data from user-------------------------------
         Model = request.form['Model_name']
         Processor = request.form['Processor']
@@ -48,11 +49,11 @@ def index():
 
         check(hard_size_list,Hard_drive_size) # for store the size of hard drive-------------------
 
-        #predictor = prediction_value(feature_list)
-        print(feature_list)
-        
+        predictor = prediction_value(feature_list)
+        #print(feature_list)
+        #print(predictor)
 
-    return render_template('interface.html')
+    return render_template('interface.html', pred = predictor)
 
 
 if __name__ == '__main__':
