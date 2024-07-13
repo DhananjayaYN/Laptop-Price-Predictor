@@ -12,7 +12,7 @@ def prediction_value(array_list):
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
-    predictor = 0
+    predictor = [0]
     if request.method == 'POST':  ##Collect the data from user-------------------------------
         Model = request.form['Model_name']
         Processor = request.form['Processor']
@@ -50,10 +50,18 @@ def index():
         check(hard_size_list,Hard_drive_size) # for store the size of hard drive-------------------
 
         predictor = prediction_value(feature_list)
+        predictor = str(predictor)
+        predictor = float(predictor[1:-1])
+        predictor = "{:.2f}".format(round(predictor, 2))
+
+        part1 = predictor[:3]
+        part2 = predictor[3:]
+        predictor_with_space = part1 + " " + part2
+
         #print(feature_list)
         #print(predictor)
 
-    return render_template('interface.html', pred = predictor)
+    return render_template('interface.html', pred = predictor_with_space)
 
 
 if __name__ == '__main__':
