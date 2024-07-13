@@ -49,8 +49,8 @@ animate();
 
 // Handle window resize
 window.addEventListener('resize', function() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    const width = window.innerWidth/3;
+    const height = 500;
     renderer.setSize(width, height);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
