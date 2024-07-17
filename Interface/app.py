@@ -12,7 +12,7 @@ def prediction_value(array_list):
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
-    predictor = [0]
+    predictor_with_space ="0.00"
     if request.method == 'POST':  ##Collect the data from user-------------------------------
         Model = request.form['Model_name']
         Processor = request.form['Processor']
