@@ -52,26 +52,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if ((Model == "MACBOOK") && (Processor != "APPLE")){
             event.preventDefault();
-            alert('You can Only use,\nMACBOOK  --->  APPLE  ---->  1,2');
-        
+            showAlert('<h1 style="color:red">Alert</h1><hr>System can give only for,<br><br>MACBOOK  --->  APPLE  ---->  1,2<br><br> Please choose these categories for MACBOOK.');
+            return 0
         }
 
         if((Model == "MACBOOK") && !(Generation === '1' || Generation === '2')){
             event.preventDefault();
-            alert('You can Only use,\nMACBOOK  --->  APPLE  ---->  1,2');
+            showAlert('<h1 style="color:red">Alert</h1><hr>System can give only for,<br><br>MACBOOK   --->   APPLE   ---->   1,2<br><br> Please choose these categories for MACBOOK.');
+            return 0
         }
 
         if((Processor == "Ryzen5" || Processor == "Ryzen7") && (Generation == "1" ||Generation == "2" ||Generation == "10" || Generation == "11" || Generation == "12" || Generation == "13" || Generation == "14" )){
             event.preventDefault();
-            alert('You can Only use,\nRyzen5,Ryzen7\t---->\t3,4,5,6,7,8,9\n');
+            showAlert('<h1 style="color:red">Alert</h1><hr>You can Only use,<br><br>Ryzen5,Ryzen7    ---->    3,4,5,6,7,8<br><br>Please choose these categories for "Ryzen" type Processors');
+            return 0
         }
 
         if((Processor == "i3" || Processor == "i5" || Processor == "i7" || Processor == "i9") && !(Generation == "10" || Generation == "11" || Generation == "12" || Generation == "13" || Generation == "14" )){
             event.preventDefault();
-            alert('You can Only use,\ni3,i5,i7,i9\t---->\t10,11,12,13,14\n');
+            showAlert('<h1 style="color:red">Alert</h1><hr>You can Only use,<br><br>i3,i5,i7,i9    ---->    10,11,12,13,14<br><br>Please choose these categories for "i" type Processors');
+            return 0
         }
 
     });
 
 });
+
+function showAlert(message) {
+    const alertBox = document.getElementById('customAlert');
+    const alertMessage = document.getElementById('alertMessage');
+    alertMessage.innerHTML = message;
+    alertBox.classList.add('show');
+    document.getElementById('overlay').style.display = 'block';
+}
+
+function closeAlert() {
+    const alertBox = document.getElementById('customAlert');
+    alertBox.classList.remove('show');
+    document.getElementById('overlay').style.display = 'none';
+}
 
