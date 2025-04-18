@@ -88,7 +88,7 @@ An end-to-end machine learning web application that predicts laptop prices based
 
 ## 🧪 Model Details
 
-- **Algorithm Used**: Random Forest Regressor (or specify the algorithm you've used)
+- **Algorithm Used**: Random Forest Regressor
 - **Features Considered**:
   - Brand
   - Processor Type
